@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		ul {
+			background-color: red;
+		}
+		.root-item {
+			display: inline;
+			position: relative;
+
+		}
+		.submenu {
+			display: none;
+			width: auto;
+		}
+		.root-item:hover .submenu {
+			display: block;
+			position: absolute;
+			left:  0px;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li class="root-item">
+				Samsung
+				<ul class="submenu">
+					<li>Samsung TV</li>
+					<li>Samsung Laptop</li>
+					<li>Samsung Mobile</li>
+				</ul>
+			</li>
+			<li class="root-item">LG
+				<ul class="submenu">
+					<li>LG TV</li>
+					<li>LG Laptop</li>
+					<li>LG Mobile</li>
+				</ul>
+			</li>
+			<li class="root-item">
+				Huawei
+				<ul class="submenu">
+					<li>Huawei TV</li>
+					<li>Huawei Laptop</li>
+					<li>Huawei Mobile</li>
+				</ul>
+			</li>
+			<li class="root-item">
+				Sony
+				<ul class="submenu">
+					<li>Sony TV</li>
+					<li>Sony Laptop</li>
+					<li>Sony Mobile</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
