@@ -1,65 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<style type="text/css">
-		ul {
-			background-color: red;
-		}
-		.root-item {
-			display: inline;
-			position: relative;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final-Project</title>
 
-		}
-		.submenu {
-			display: none;
-			width: auto;
-		}
-		.root-item:hover .submenu {
-			display: block;
-			position: absolute;
-			left:  0px;
-		}
-
-	</style>
+    <!-- --------this is icon link-------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -----------this is cssfile link----------- -->
+    <link rel="stylesheet" href="css-file/style.css">
 </head>
+
 <body>
-	<div>
-		<ul>
-			<li class="root-item">
-				Samsung
-				<ul class="submenu">
-					<li>Samsung TV</li>
-					<li>Samsung Laptop</li>
-					<li>Samsung Mobile</li>
-				</ul>
-			</li>
-			<li class="root-item">LG
-				<ul class="submenu">
-					<li>LG TV</li>
-					<li>LG Laptop</li>
-					<li>LG Mobile</li>
-				</ul>
-			</li>
-			<li class="root-item">
-				Huawei
-				<ul class="submenu">
-					<li>Huawei TV</li>
-					<li>Huawei Laptop</li>
-					<li>Huawei Mobile</li>
-				</ul>
-			</li>
-			<li class="root-item">
-				Sony
-				<ul class="submenu">
-					<li>Sony TV</li>
-					<li>Sony Laptop</li>
-					<li>Sony Mobile</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+    <!-- --------this is header--------- -->
+    <header class="d-flex align-Center justify">
+        <nav class="container align-Center d-grid">
+            <div>
+                <h3><a href="">props</a></h3>
+            </div>
+            <div class="burger">
+                <a href=""> <span></span>
+                </a>
+                <div class="list">
+                    <ul class="d-flex">
+                        <li><a href="">Home</a></li>
+                        <li><a class="azam">Properties</a>
+                            <ul class="dropdown1">
+                                <li><a href="">Buy Propery</a></li>
+                                <li><a href="">Sell Propery</a></li>
+                                <li><a>Dropdown</a>
+                                    <ul class="dropdown2">
+                                        <li><a href="">Sub Menu One</a></li>
+                                        <li><a href="">Sub Menu Two</a></li>
+                                        <li><a href="">Sub Menu Three</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="Contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class=" d-flex content align-Center justify container">
+            <h1>FIND A PERFECT DREAM HOUSE</h1>
+            <div>
+                <input type="text" placeholder="Your Zip code or city.e.g.New York">
+                <button>Search</button>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, esse. Quae quaerat quasi fuga
+                nesciunt illo hic in eius soluta, vitae culpa, minus ipsa. Aspernatur odit accusantium facere
+                cupiditate animi!</p>
+
+            <div>
+                <a href="">view Properties</a>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ---------first icon raw----------- -->
+
+    <div class="icon1 d-grid container">
+        <div class="d-flex align-Center justify">
+            <i class="fa fa-home"></i>
+            <h4>New Properties</h4>
+        </div>
+        <div class="d-flex align-Center justify">
+            <i class="fa  fa-bank"></i>
+            <h4>Contact Agent</h4>
+        </div>
+        <div class="d-flex align-Center justify">
+            <i class="fa fa-building"></i>
+            <h4>Building for Sale</h4>
+        </div>
+        <div class="d-flex align-Center justify">
+            <i class="fa fa-archive"></i>
+            <h4>House for Sale</h4>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- -------this is property section-------- -->
+        <section class="section1 container">
+            <div class="d-flex align-Center properties">
+                <h2>POPULAR PROPERTIES</h2>
+                <BUTTon>View all properties</BUTTon>
+            </div>
+            <div class="d-grid houses">
+                <div>
+                    <img src="images/img_9.jpg.webp" alt="">
+                    <div class="information">
+                        <h3>$3,298,000</h3>
+                        <p>5232 North Carolina Ave. 21BC</p>
+                        <h3>Carolina, USA</h3>
+                        <div>
+                            <i class="fa fa-bed"></i>
+                            <span>2 beds</span>
+                            <i class="fa fa-bath"></i>
+                            <span>2 baths</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/img_1.jpg.webp" alt="">
+                    <div class="information">
+                        <h3>$3,298,000</h3>
+                        <p>5232 North Carolina Ave. 21BC</p>
+                        <h3>Carolina, USA</h3>
+                        <div>
+                            <i class="fa fa-bed"></i>
+                            <span>2 beds</span>
+                            <i class="fa fa-bath"></i>
+                            <span>2 baths</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/img_8.jpg.webp" alt="">
+                    <div class="information">
+                        <h3>$3,298,000</h3>
+                        <p>5232 North Carolina Ave. 21BC</p>
+                        <h3>Carolina, USA</h3>
+                        <div>
+                            <i class="fa fa-bed"></i>
+                            <span>2 beds</span>
+                            <i class="fa fa-bath"></i>
+                            <span>2 baths</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" d-flex buttons">
+                <button>prev</button>
+                <button>next</button>
+            </div>
+        </section>
+        <!-- --------this is the homes and their prices section-------- -->
+        <section class="container section2">
+            <div>
+                <h2>TESTIMONIALS</h2>
+            </div>
+            <div class="bio d-grid">
+                <div>
+                    <img src="images/person_1.jpg.webp" alt="">
+                    <h3>James Smith</h3>
+                    <p>
+
+                        “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”
+                    </p>
+                    <h4>Designer, Co-founder</h4>
+                </div>
+                <div>
+                    <img src="images/person_3.jpg.webp" alt="">
+                    <h3>Synthia Cameron</h3>
+                    <p>
+
+                        “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”
+                    </p>
+                    <h4>Designer, Co-founder</h4>
+                </div>
+                <div>
+                    <img src="images/person_4.jpg.webp" alt="">
+                    <h3>Davin Smith</h3>
+                    <p>
+
+                        “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”
+                    </p>
+                    <h4>Designer, Co-founder</h4>
+
+                </div>
+            </div>
+            <!-- -------this is the bring house to reality section-------- -->
+        </section>
+        <section class="section3">
+            <div class="d-flex dream-House align-Center">
+                <h2>We Bring Dream Homes To Reality</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus neque ipsam dicta quod animi
+                    voluptatum
+                    vel dignissimos vitae aliquam quos ipsum, a quasi rerum dolor, velit vero pariatur corrupti facere!
+                </p>
+            </div>
+            <div class="container d-grid content2">
+                <div>
+                    <img src="images/hero_2.jpg.webp" alt="">
+                </div>
+
+                <div class="icons-Caption d-flex">
+                    <div class="icons-Content d-flex">
+                        <div class="icon2 align-Center justify d-flex">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div>
+                            <h3>Quality properties</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="icons-Content d-flex">
+                        <div class="icon2 align-Center justify d-flex">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h3>Top rated agents</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="icons-Content d-flex">
+                        <div class="icon2 align-Center justify d-flex">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <div>
+                            <h3>Easy and safe</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid numbers container">
+                <div>
+                    <h2>1,291</h2>
+                    <span># of Agents</span>
+                </div>
+                <div>
+                    <h2>38,928</h2>
+                    <span># of All Properties</span>
+                </div>
+                <div>
+                    <h2>3,918</h2>
+                    <span># of Sell Properties</span>
+                </div>
+                <div>
+                    <h2>2,917</h2>
+                    <span>#of Buy Properties</span>
+                </div>
+            </div>
+        </section>
+        <!-- --------The Agents Section--------- -->
+        <section class="section4">
+            <div class="d-flex title align-Center justify">
+                <h2>OUR AGENTS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus neque ipsam dicta quod animi
+                    voluptatum
+                    vel dignissimos vitae aliquam quos ipsum, a quasi rerum dolor, velit vero pariatur corrupti facere!
+                </p>
+            </div>
+            <div class="container agents d-grid">
+                <div class="d-flex align-Center">
+                    <div>
+                        <img src="images/person_1.jpg.webp" alt="">
+                    </div>
+                    <h4>James Doe</h4>
+                    <span>Real Estate Agent</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae dolorum fuga,
+                        ducimus nisi et atque itaque adipisci cupiditate quibusdam quos, doloribus ipsa voluptatibus hic
+                        eligendi ad corporis corrupti praesentium?</p>
+                    <div class="icon3 d-flex">
+                        <div class="d-flex align-Center justify"><i class="fab fa-twitter"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-facebook"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-linkedin"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                <div class="d-flex align-Center">
+                    <div><img src="images/person_2.jpg.webp" alt=""></div>
+                    <h4>Jean Smith</h4>
+                    <span>Real Estate Agent</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae dolorum fuga,
+                        ducimus nisi et atque itaque adipisci cupiditate quibusdam quos, doloribus ipsa voluptatibus hic
+                        eligendi ad corporis corrupti praesentium?</p>
+                    <div class="icon3 d-flex">
+                        <div class="d-flex align-Center justify"><i class="fab fa-twitter"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-facebook"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-linkedin"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+                <div class="d-flex align-Center">
+                    <div><img src="images/person_3.jpg.webp" alt=""></div>
+                    <h4>Alicia Huston</h4>
+                    <span>Real Estate Agent</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae dolorum fuga,
+                        ducimus nisi et atque itaque adipisci cupiditate quibusdam quos, doloribus ipsa voluptatibus hic
+                        eligendi ad corporis corrupti praesentium?</p>
+                    <div class="icon3 d-flex">
+                        <div class="d-flex align-Center justify"><i class="fab fa-twitter"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-facebook"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-linkedin"></i></div>
+                        <div class="d-flex align-Center justify"><i class="fab fa-instagram"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- --------this is footer-------- -->
+    <footer>
+        <div class="d-flex footer-Title container align-Center">
+            <h2>Be a part of our growing real state agents</h2>
+            <button>Apply For Real State Agent</button>
+        </div>
+        <div class="footer-List d-grid container">
+            <ul>
+                <li>Contact</li>
+                <li>43 Raymouth Rd. Baltemoer, London 3910</li>
+                <li><a href="">+1(123)-456-7890</a></li>
+                <li><a href="">+1(123)-456-7890</a></li>
+                <li><a href="">info@mydomain.com</a></li>
+            </ul>
+            <ul>
+                <li>Sources</li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Vision</a></li>
+                <li><a href="">Mission</a></li>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Privacy</a></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li><a href="">Partners</a></li>
+                <li><a href="">Business</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Creative</a></li>
+            </ul>
+            <ul>
+                <li>links</li>
+                <li><a href="">Our Vision</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li class="icon4 d-flex align-Center">
+                    <div class="d-flex align-Center justify "><i class="fab fa-instagram"></i></div>
+                    <div class="d-flex align-Center justify"><i class="fab fa-facebook"></i></div>
+                    <div class="d-flex align-Center justify"><i class="fab fa-twitter"></i></div>
+                    <div class="d-flex align-Center justify"><i class="fab fa-linkedin"></i></div>
+                    <div class="d-flex align-Center justify"><i class="fab fa-pinterest"></i></div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="container end  ">
+            <p>
+
+                Copyright ©2023 All rights reserved | This template is made with by <i class="fa fa-heart"></i><a
+                    href="">Colorlib</a>
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>

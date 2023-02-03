@@ -1,0 +1,830 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+::selection {
+    background-color: var(--bs-white);
+    color: var(--bs-blue);
+}
+
+:root {
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1f6f8b;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: "Noto Sans JP", sans-serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.align-Center {
+    align-items: center;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* --------this is header-------- */
+
+header {
+    width: 100%;
+    height: 70vh;
+    background-color: var(--bs-primary);
+    position: relative;
+}
+
+.burger {
+    background-color: transparent;
+}
+
+.burger>a {
+    display: block;
+    width: 50%;
+    height: 50%;
+}
+
+nav {
+    background-color: var(--bs-white);
+    display: grid;
+    grid-template-columns: 10% 40%;
+    justify-content: space-between;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list>ul>li>a {
+    display: block;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: var(--bs-primary);
+}
+
+nav>div>h3>a {
+    display: block;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--bs-primary);
+}
+
+.list>ul>li:nth-child(2) {
+    position: relative;
+}
+
+.list>ul>li:nth-child(2)::after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    border-top: 0;
+    border-left: 0;
+    position: absolute;
+    left: 95%;
+    bottom: 20px;
+}
+
+.dropdown1 {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--bs-white);
+    width: 150px;
+    position: absolute;
+    top: 100%;
+    line-height: 2em;
+    margin-top: 1px;
+    padding: 30px 0;
+    padding-left: 20px;
+    transition-duration: 0.6s;
+    margin-top: 50px;
+}
+
+.list>ul>li:nth-child(2):hover .dropdown1 {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, -30%);
+}
+
+.dropdown1>li:last-child {
+    position: relative;
+}
+
+.dropdown1>li:last-child:after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    border-left: 0;
+    border-bottom: 0;
+    position: absolute;
+    left: 60%;
+    bottom: 10px;
+}
+
+.dropdown2 {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--bs-white);
+    width: 150px;
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    line-height: 2em;
+    margin-top: 1px;
+    padding: 30px 0;
+    padding-left: 20px;
+    transition-duration: 0.6s;
+    margin-top: 50px;
+}
+
+.dropdown1>li:last-child:hover .dropdown2 {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, -30%);
+}
+
+.contact {
+    flex-direction: column;
+    padding: 15%;
+    color: var(--bs-white);
+}
+
+.contact h1 {
+    font-size: 50px;
+}
+
+.contact span {
+    color: var(--bs-dark);
+}
+
+/* --------this is the form section-------- */
+
+section {
+    padding: 5% 0;
+}
+
+section>div:first-child>h2 {
+    font-size: 30px;
+    color: var(--bs-primary);
+    padding-bottom: 2%;
+}
+
+section>div:first-child>p {
+    color: var(--bs-gray-dark);
+    padding-bottom: 2%;
+    width: 50%;
+}
+
+.form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    gap: 5%;
+    grid-template-areas: "column1 column2" "column3 column4" "column5 column5";
+}
+
+.form input {
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 2%;
+}
+
+.form>input:first-child {
+    grid-area: column1;
+}
+
+.form>input:nth-of-type(2) {
+    grid-area: column2;
+}
+
+.form>input:nth-of-type(3) {
+    grid-area: column3;
+}
+
+.form>input:last-child {
+    grid-area: column4;
+}
+
+.form textarea {
+    grid-area: column5;
+    font-size: 18px;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.form button {
+    width: 60%;
+    padding: 3% 0;
+    color: var(--bs-white);
+    background: linear-gradient(270deg, #f82a7e 0%, #752a90 100%);
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+/* --------this is footer-------- */
+
+footer {
+    padding: 5%;
+    background-color: #efefef;
+    line-height: 2em;
+}
+
+.footer-Title {
+    flex-direction: column;
+}
+
+.footer-Title h2 {
+    font-size: 30px;
+    color: var(--bs-primary);
+    padding-bottom: 3%;
+}
+
+.footer-Title button {
+    width: 250px;
+    padding: 18px;
+    color: white;
+    border-radius: 30px;
+    transition-duration: 0.2s;
+    background: linear-gradient(270deg, #f82a7e 0%, #752a90 100%);
+}
+
+.footer-Title button:hover {
+    transform: translate(0, -5%);
+    box-shadow: -5px 5px 20px 3px #212529;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-List {
+    grid-template-areas: 30% 10% 10% 30%;
+    padding: 5%;
+}
+
+footer li {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-List>ul:first-child>li:first-child,
+.footer-List>ul:nth-child(2)>li:first-child,
+.footer-List>ul:last-child>li:first-child {
+    color: var(--bs-primary);
+    padding-bottom: 3%;
+}
+
+.icon4 {
+    gap: 10px;
+    padding-top: 3%;
+}
+
+.icon4 div {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #ccc;
+    transition-duration: 0.4s;
+}
+
+footer a:hover {
+    color: black;
+    border-bottom: 4px solid var(--bs-primary);
+}
+
+.icon4 div:hover {
+    transform: translate(0, -10%);
+    color: white;
+    background-color: var(--bs-primary);
+}
+
+.end p {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.end i {
+    color: red;
+}
+
+.footer-List>ul:nth-of-type(3) {
+    padding-top: 40px;
+}
+
+@media(max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        height: 60vh;
+    }
+
+    nav {
+        width: 100%;
+        grid-template-columns: 4fr 1fr;
+        left: 5%;
+    }
+
+    .burger>a::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .burger>a::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .burger>a:hover+.list {
+        display: block;
+        visibility: visible;
+    }
+
+    .burger>a>span::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .list {
+        background-color: var(--bs-white);
+        width: 200px;
+        display: none;
+        visibility: hidden;
+        position: absolute;
+        right: 20%;
+    }
+
+    .list ul {
+        flex-direction: column;
+    }
+
+    .list>ul>li:nth-child(2):active .dropdown1 {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, -30%);
+    }
+
+    nav h3 {
+        font-size: 20px;
+    }
+
+    .list>ul a {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+
+    .list>ul>li:nth-child(2)::after {
+        bottom: 20px;
+    }
+
+    
+    .contact {
+        padding-top: 30%;
+    }
+
+    .contact h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 5% 0;
+        padding-bottom: 20%;
+    }
+
+    section>div:first-child>h2 {
+        font-size: 30px;
+        color: var(--bs-primary);
+        padding-bottom: 2%;
+        text-align: center;
+    }
+
+    section>div:first-child>p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 50px 50px;
+        gap: 5%;
+        grid-template-areas: "column1 column1" "column2 column2" "column3 column3" "column4 column4" "column5 column5" "column6 column6";
+    }
+
+    .form input {
+        font-size: 14px;
+    }
+
+    .form>input:first-child {
+        grid-area: column1;
+    }
+
+    .form>input:nth-of-type(2) {
+        grid-area: column2;
+    }
+
+    .form>input:nth-of-type(3) {
+        grid-area: column3;
+    }
+
+    .form>input:last-child {
+        grid-area: column4;
+    }
+
+    .form textarea {
+        grid-area: column5;
+        font-size: 14px;
+    }
+
+    .form button {
+        grid-area: column6;
+        width: 40%;
+        padding: 2% 0;
+        border-radius: 30px;
+        font-size: 12px;
+    }
+    
+    .footer-Title h2 {
+        font-size: 24px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    .footer-List {
+        grid-template-columns: 30% 20%;
+        justify-content: space-between;
+    }
+
+    .icon4 {
+        gap: 7px;
+        padding-top: 3%;
+    }
+
+    .icon4 div {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon4 div i {
+        font-size: 12px;
+    }
+
+    .end p {
+        font-size: 12px;
+    }
+
+    .end i {
+        font-size: 12px;
+    }
+
+    .footer-List>ul:nth-of-type(3) {
+        padding-top: 40px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:1200px) {
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        grid-template-columns: 4fr 1fr;
+        left: 10%;
+    }
+
+    nav h3 {
+        font-size: 22px;
+    }
+
+    .burger {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+    }
+
+    .burger>a::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .burger>a::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .burger>a>span::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .burger>a:focus+.list {
+        display: block;
+        visibility: visible;
+    }
+
+    .list {
+        background-color: var(--bs-white);
+        width: 200px;
+        display: none;
+        visibility: hidden;
+        position: absolute;
+        right: 60%;
+    }
+
+    .list ul {
+        flex-direction: column;
+    }
+
+    .burger a:focus+.list {
+        display: block;
+        visibility: visible;
+    }
+
+    .list>ul>li:nth-child(2)::after {
+        bottom: 20px;
+    }
+
+    .dropdown1 {
+        top: 60%;
+    }
+
+    .list>ul>li:nth-child(2):focus .dropdown1 {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown1>li:last-child {
+        position: relative;
+    }
+
+    .dropdown1>li:last-child:after {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border: 1px solid black;
+        transform: rotate(45deg);
+        border-left: 0;
+        border-bottom: 0;
+        position: absolute;
+        left: 60%;
+        bottom: 10px;
+    }
+
+    .list>ul a {
+        font-size: 14px;
+    }
+
+    .contact {
+        padding-top: 20%;
+    }
+
+    .contact h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 5% 0;
+        padding-bottom: 20%;
+    }
+
+    section>div:first-child>h2 {
+        font-size: 30px;
+        color: var(--bs-primary);
+        padding-bottom: 2%;
+        text-align: center;
+    }
+
+    section>div:first-child>p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 50px 50px;
+        gap: 5%;
+        grid-template-areas: "column1 column1" "column2 column2" "column3 column3" "column4 column4" "column5 column5" "column6 column6";
+    }
+
+    .form input {
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .form>input:first-child {
+        grid-area: column1;
+    }
+
+    .form>input:nth-of-type(2) {
+        grid-area: column2;
+    }
+
+    .form>input:nth-of-type(3) {
+        grid-area: column3;
+    }
+
+    .form>input:last-child {
+        grid-area: column4;
+    }
+
+    .form textarea {
+        grid-area: column5;
+        font-size: 14px;
+    }
+
+    .form button {
+        grid-area: column6;
+        width: 30%;
+        padding: 2% 0;
+        border-radius: 30px;
+        font-size: 12px;
+    }
+
+    .footer-Title h2 {
+        font-size: 28px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    .footer-List {
+        grid-template-columns: 30% 20% 20% 30%;
+    }
+
+    .icon4 {
+        gap: 7px;
+        padding-top: 3%;
+    }
+
+    .icon4 div {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon4 div i {
+        font-size: 14px;
+    }
+
+    .end p {
+        font-size: 14px;
+    }
+
+    .end i {
+        font-size: 14px;
+        color: red;
+    }
+
+    .footer-List>ul:nth-of-type(3) {
+        padding-top: 40px;
+    }
+
+}
+
+@media(min-width:1200px) and (max-width:1600px) {
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        width: 100%;
+        grid-template-columns: 10% 50%;
+    }
+
+    nav h3 {
+        font-size: 26px;
+    }
+
+    .list>ul a {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .contact {
+        padding-top: 15%;
+    }
+
+    .contact h1 {
+        font-size: 50px;
+    }
+
+    .footer-Title h2 {
+        font-size: 30px;
+    }
+
+    .footer-Title button:focus {
+        transform: translate(0, -5%);
+        box-shadow: -5px 5px 20px 3px #212529;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    .footer-List {
+        grid-template-columns: 30% 20% 20% 30%;
+    }
+
+    .icon4 {
+        gap: 7px;
+        padding-top: 3%;
+    }
+
+    .icon4 div {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon4 div:focus {
+        transform: translate(0, -10%);
+        color: white;
+        background-color: var(--bs-primary);
+    }
+
+    .icon4 div i {
+        font-size: 14px;
+    }
+
+    .end p {
+        font-size: 14px;
+    }
+
+    .end i {
+        font-size: 14px;
+        color: red;
+    }
+
+    .footer-List>ul:nth-of-type(3) {
+        padding-top: 40px;
+    }
+
+
+}
